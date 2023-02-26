@@ -4,9 +4,7 @@
     <div class="col-8">
         <div class="card chatbox-height scroll">
             <div class="card-body text-format">
-                <% @messages.each do |message| %>
-                  <em><%= message.user.username %></em>: <%= message.body %><br/>
-                <% end %>
+                <%= render @messages %>
             </div>
         </div>
         <div class="input-group mb-3 top-gap">
