@@ -4,32 +4,9 @@
     <div class="col-8">
         <div class="card chatbox-height scroll">
             <div class="card-body text-format">
-                <p><em>Abinash</em> : hi how are you doing</p>
-                <p><em>Suji</em> : I am fine. How about you?</p>
-                <p><em>Abinash</em> : hi how are you doing</p>
-                <p><em>Suji</em> : I am fine. How about you?</p>
-                <p><em>Abinash</em> : hi how are you doing</p>
-                <p><em>Suji</em> : I am fine. How about you?</p>
-                <p><em>Abinash</em> : hi how are you doing</p>
-                <p><em>Suji</em> : I am fine. How about you?</p>
-                <p><em>Abinash</em> : hi how are you doing</p>
-                <p><em>Suji</em> : I am fine. How about you?</p>
-                <p><em>Abinash</em> : hi how are you doing</p>
-                <p><em>Suji</em> : I am fine. How about you?</p>
-                <p><em>Abinash</em> : hi how are you doing</p>
-                <p><em>Suji</em> : I am fine. How about you?</p>
-                <p><em>Abinash</em> : hi how are you doing</p>
-                <p><em>Suji</em> : I am fine. How about you?</p>
-                <p><em>Abinash</em> : hi how are you doing</p>
-                <p><em>Suji</em> : I am fine. How about you?</p>
-                <p><em>Abinash</em> : hi how are you doing</p>
-                <p><em>Suji</em> : I am fine. How about you?</p>
-                <p><em>Abinash</em> : hi how are you doing</p>
-                <p><em>Suji</em> : I am fine. How about you?</p>
-                <p><em>Abinash</em> : hi how are you doing</p>
-                <p><em>Suji</em> : I am fine. How about you?</p>
-                <p><em>Abinash</em> : hi how are you doing</p>
-                <p><em>Suji</em> : I am fine. How about you?</p>
+                <% @messages.each do |message| %>
+                  <em><%= message.user.username %></em>: <%= message.body %><br/>
+                <% end %>
             </div>
         </div>
         <div class="input-group mb-3 top-gap">
