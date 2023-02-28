@@ -8,8 +8,10 @@
             </div>
         </div>
         <div class="input-group mb-3 top-gap">
-            <input type="text" class="form-control" placeholder="Hi, Say Something - Its Coffee talk Time." aria-label="Recipient's username" aria-describedby="button-addon2">
-            <button class="btn btn-outline-secondary" type="button">Send</button>
+        <%= form_for(@message, html: {class: "form-control", role: "form", placeholder: "Hi, Say Something - Its Coffee talk Time."}, url: message_path) do |f| %>
+            <%= f.text_field :body %>
+            <%= f.button '<i class="bi bi-send-fill"></i>'.html_safe %>
+        <% end %>
         </div>
     </div>
     <div class="col-4">
